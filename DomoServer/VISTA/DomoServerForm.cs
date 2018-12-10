@@ -1,4 +1,5 @@
-﻿using System.IO;
+﻿using DomoServer.VISTA;
+using System.IO;
 using System.Net;
 using System.Windows.Forms;
 
@@ -26,7 +27,8 @@ namespace DomoServer
 
         private void btnAddCell_Click(object sender, System.EventArgs e)
         {
-            lblTexto.Text = ((DomoServerModule) parent).GetWifiDevices();
+			Devices dev = new Devices(parent);
+			dev.Show();
         }
     }
 }
